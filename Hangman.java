@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Hangman {
     public static void main(String[] args) throws Exception {
 
-        System.out.println("Welcome to Hangman! You have 6 lives to guess the word. Good Luck!");
+        System.out.println("Welcome to Hangman! You have 9 lives to guess the right word. Good Luck!");
         File dictionary = new File("C:\\Development\\Java\\Hangman\\dictionary.txt");
 
         // Scanner zum Lesen der Datei und für die Benutzereingabe
@@ -38,7 +38,7 @@ public class Hangman {
         }
 
         boolean finished = false;
-        int lives = 6;
+        int lives = 9;
 
         while (!finished) {
             System.out.println("*************************");
@@ -100,7 +100,7 @@ public class Hangman {
     }
 
     public static void drawHangman(int l) {
-        if (l == 6) {
+        if (l == 9) {
             System.out.println("|----------");
             System.out.println("|");
             System.out.println("|");
@@ -108,7 +108,7 @@ public class Hangman {
             System.out.println("|");
             System.out.println("|");
             System.out.println("|");
-        } else if (l == 5) {
+        } else if (l == 8) {
             System.out.println("|----------");
             System.out.println("|    O");
             System.out.println("|");
@@ -116,7 +116,7 @@ public class Hangman {
             System.out.println("|");
             System.out.println("|");
             System.out.println("|");
-        } else if (l == 4) {
+        } else if (l == 7) {
             System.out.println("|----------");
             System.out.println("|    O");
             System.out.println("|    |");
@@ -124,7 +124,7 @@ public class Hangman {
             System.out.println("|");
             System.out.println("|");
             System.out.println("|");
-        } else if (l == 3) {
+        } else if (l == 6) {
             System.out.println("|----------");
             System.out.println("|    O");
             System.out.println("|   -|");
@@ -132,7 +132,7 @@ public class Hangman {
             System.out.println("|");
             System.out.println("|");
             System.out.println("|");
-        } else if (l == 2) {
+        } else if (l == 5) {
             System.out.println("|----------");
             System.out.println("|    O");
             System.out.println("|   -|-");
@@ -140,7 +140,7 @@ public class Hangman {
             System.out.println("|");
             System.out.println("|");
             System.out.println("|");
-        } else if (l == 1) {
+        } else if (l == 4) {
             System.out.println("|----------");
             System.out.println("|    O");
             System.out.println("|   -|-");
@@ -148,11 +148,35 @@ public class Hangman {
             System.out.println("|");
             System.out.println("|");
             System.out.println("|");
-        } else {
+        } else if (l == 3) {
             System.out.println("|----------");
             System.out.println("|    O");
             System.out.println("|   -|-");
-            System.out.println("|   /|");
+            System.out.println("|   /| ");
+            System.out.println("|");
+            System.out.println("|");
+            System.out.println("|");
+        } else if (l == 2) {
+            System.out.println("|----------");
+            System.out.println("|    O");
+            System.out.println("|   -|-");
+            System.out.println("|   /|/");
+            System.out.println("|");
+            System.out.println("|");
+            System.out.println("|");
+        } else if (l == 1) {
+            System.out.println("|----------");
+            System.out.println("|     O");
+            System.out.println("|   /-|-");
+            System.out.println("|    /|/");
+            System.out.println("|");
+            System.out.println("|");
+            System.out.println("|");
+        } else {
+            System.out.println("|----------");
+            System.out.println("|     O");
+            System.out.println("|   /-|-/");
+            System.out.println("|    /|/");
             System.out.println("|");
             System.out.println("|");
             System.out.println("|");
