@@ -2,11 +2,11 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-/*
- * Version 1.0
+/**
+ * Version: 1.0
  * Author: A2N1
- * Date: 2021-09-30
- * 
+ * Date: 2024-10-02
+ * -----------------------------------------------------
  * Hangman is a word guessing game. The player has to guess the word by suggesting letters within a certain number of guesses.
  * The player has 9 lives to guess the word. If the player guesses the word within 9 lives, the player wins. If the player
  * runs out of lives, the player loses.
@@ -109,6 +109,11 @@ public class Hangman {
         input.close();
     }
 
+    /**
+     * Zeichnet den aktuellen Hangman-Status basierend auf den verbleibenden Leben.
+     * Der Zustand wird mit zunehmendem Fortschritt (mehr falsche Versuche) detaillierter.
+     * @param l Anzahl der verbleibenden Leben des Spielers
+     */
     public static void drawHangman(int l) {
         if (l == 9) {
             System.out.println("|----------");
